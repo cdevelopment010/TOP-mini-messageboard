@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% if (messages.length > 0) { %>
+      <ul class="message-container">
+      <% messages.forEach(message => { %>
+        <% if (!message.myUser) { %>
+          <li class="message other-user-message">
+            <div class="d-flex justify-content-between mb-1">
+              <span><%= message.user %></span>
+              <span><%= message.added.toLocaleString() %></span>
+            </div>
+            <div><%= message.text%></div>
+          </li>
+        <% } else { %>
+          <li class="message my-user-message">
+            <div class="d-flex justify-content-between mb-1">
+              <span><%= message.user %></span>
+              <span><%= message.added.toLocaleString() %></span>
+            </div>
+            <div><%= message.text%></div>  
+          </li>
+        <% } %>
+      <% })  %>
+      </ul>
+    <% }  %>
+
+    <a href="/new" class="btn">Add message</a>
+  </body>
+</html>

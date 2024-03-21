@@ -1,0 +1,49 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: whitesmoke
+}
+
+a {
+  color: black;
+}
+
+li { 
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.mb-1 { margin-bottom: 0.5rem;}
+.d-flex { display: flex}
+.justify-content-between { justify-content: space-between;}
+
+.message-container { 
+  background: white;
+  margin-inline: auto; 
+  width: 80vw; 
+  border: 1px solid silver; 
+  height: 60vh; 
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
+.message { 
+  width: 25%; 
+  border-radius: 20px;
+  border: 1px solid silver;
+  padding: 1rem 0.5rem;
+  position: relative; 
+  
+
+}
+
+
+.other-user-message {
+  background-color: #00B7FF;
+  color: white; 
+}
+
+.my-user-message { 
+  /* background-color: rgb(118, 252, 118); */
+  margin-left: auto;
+}
